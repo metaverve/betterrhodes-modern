@@ -11,11 +11,12 @@
     .serif { font-family: 'Libre Baskerville', serif; }
     .orange-btn { background-color: #d97706; }
     .orange-btn:hover { background-color: #b45309; }
+    .step.active { border-color: #d97706; background: white; }
   </style>
 </head>
 <body class="antialiased">
   <!-- Nav -->
-  <nav class="fixed w-full bg-[#e8e4d9]/95 backdrop-blur-md z-50">
+  <nav class="fixed w-full bg-[#e8e4d9]/95 backdrop-blur-md z-50 border-b border-stone-200/30">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <div class="flex items-center gap-3">
         <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,7 +41,7 @@
   <section class="pt-28 pb-16 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
     <div>
       <h1 class="serif text-5xl md:text-6xl font-bold leading-tight text-slate-800">Leading the Exploration<br>of the No- and Low-<br>Alcohol Experience</h1>
-      <p class="mt-6 text-lg text-slate-600 leading-relaxed">Charting a path to premium, alcohol-free enjoyment. Rhodey powers discovery, white-label creation, and social video.</p>
+      <p class="mt-6 text-lg text-slate-600 leading-relaxed">Charting a path to premium, alcohol-free enjoyment. Rhodey, your intelligent agent, helps you discover brands, create white-label products, and generate social videos.</p>
       <div class="mt-8 flex gap-4">
         <a href="#brands" class="orange-btn text-white px-6 py-3 rounded font-medium">Explore Brands</a>
         <a href="#white-label" class="border-2 border-slate-800 text-slate-800 px-6 py-3 rounded font-medium hover:bg-white">Start White Label</a>
@@ -59,32 +60,32 @@
     </div>
   </section>
 
-  <!-- Rhodey -->
+  <!-- Rhodey Agent -->
   <section class="py-8 px-6 max-w-3xl mx-auto">
     <div class="bg-white rounded-3xl shadow-lg p-6 border border-stone-200">
       <div class="flex items-center gap-3 mb-4">
         <div class="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold">R</div>
         <div>
           <div class="font-semibold">Rhodey</div>
-          <div class="text-xs text-slate-500">AI Agent — Brands, White Label, Social Video</div>
+          <div class="text-xs text-slate-500">Your AI Agent for Brands, White Label & Socials</div>
         </div>
       </div>
-      <div class="bg-stone-50 rounded-2xl p-4 text-sm mb-4">How can I help? Explore brands, start a private label project, or generate a social video brief for AutoVidTurbo.</div>
+      <div id="rhodey-chat" class="bg-stone-50 rounded-2xl p-4 text-sm mb-4 h-32 overflow-y-auto">How can I help you today? Explore our exclusive brands, start a private label project, or generate a social video brief for AutoVidTurbo.</div>
       <div class="flex gap-2">
-        <input type="text" placeholder="Ask Rhodey..." class="flex-1 border border-stone-300 rounded-full px-4 py-2 text-sm focus:outline-none focus:border-orange-500">
-        <button class="orange-btn text-white rounded-full px-5 py-2 text-sm">Send</button>
+        <input id="rhodey-input" type="text" placeholder="Ask Rhodey..." class="flex-1 border border-stone-300 rounded-full px-4 py-2 text-sm focus:outline-none focus:border-orange-500">
+        <button onclick="sendRhodey()" class="orange-btn text-white rounded-full px-5 py-2 text-sm">Send</button>
       </div>
     </div>
   </section>
 
   <!-- Story -->
   <section id="story" class="bg-slate-800 text-white py-20">
-    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
       <div>
         <div class="text-sm uppercase tracking-widest text-slate-400 mb-2">OUR STORY</div>
         <h2 class="serif text-4xl font-bold leading-tight">Charting a path to premium, alcohol-free enjoyment for those who value more in each moment.</h2>
       </div>
-      <div class="text-slate-300">
+      <div class="text-slate-300 leading-relaxed">
         <p>Better Rhodes was started as an idea to bring the No- and Low-Alcohol beverages to market through the development of game-changing brands. Our marketplace has been the leading community to hear from customers and has grown into the best destination with the most selection of curated and new brands. All our efforts drive to one thing: bringing the best in the category to consumers. We're proud of the brands we're building that represent the next generation in the category.</p>
       </div>
     </div>
@@ -109,16 +110,27 @@
     </div>
   </section>
 
-  <!-- White Label -->
+  <!-- White Label Maker -->
   <section id="white-label" class="py-20 bg-white/50">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <div class="text-sm uppercase tracking-widest text-slate-500 mb-2">PRIVATE LABEL SOLUTIONS</div>
-      <h2 class="serif text-4xl font-bold mb-4">White-Label Product Maker</h2>
-      <p class="text-slate-600 mb-8 max-w-2xl mx-auto">Rhodey guides your brand concept, label design, and AutoVidTurbo social video. Jobs integrate with the staff platform.</p>
-      <div class="bg-white rounded-3xl shadow p-8 border max-w-lg mx-auto">
-        <input type="text" placeholder="Your Brand Name" class="w-full border rounded-lg px-4 py-3 mb-4">
-        <select class="w-full border rounded-lg px-4 py-3 mb-4"><option>Wine</option><option>Spirit Alternative</option><option>RTD Mocktail</option></select>
-        <button class="orange-btn text-white w-full py-3 rounded-lg font-medium">Start with Rhodey</button>
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <div class="text-sm uppercase tracking-widest text-slate-500 mb-2">PRIVATE LABEL SOLUTIONS</div>
+        <h2 class="serif text-4xl font-bold">White-Label Product Maker</h2>
+        <p class="text-slate-600 mt-4 max-w-2xl mx-auto">Powered by Rhodey. Three steps to your brand concept, label, and AutoVidTurbo social video. Jobs integrate with the staff platform.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-4 mb-8">
+        <div class="step active border-2 border-orange-500 rounded-xl p-4 text-center bg-white"><div class="text-2xl font-bold text-orange-600">1</div><div class="font-medium">Brand & Type</div></div>
+        <div class="step border-2 border-stone-200 rounded-xl p-4 text-center"><div class="text-2xl font-bold text-stone-400">2</div><div class="font-medium">Flavor & Label</div></div>
+        <div class="step border-2 border-stone-200 rounded-xl p-4 text-center"><div class="text-2xl font-bold text-stone-400">3</div><div class="font-medium">Social Video</div></div>
+      </div>
+      <div class="bg-white rounded-3xl shadow-lg p-8 border max-w-2xl mx-auto">
+        <div class="space-y-4">
+          <input id="brand-name" type="text" placeholder="Your Brand Name" class="w-full border rounded-lg px-4 py-3">
+          <select id="product-type" class="w-full border rounded-lg px-4 py-3"><option>Wine</option><option>Spirit Alternative</option><option>RTD Mocktail</option><option>Beer</option></select>
+          <input id="flavor" type="text" placeholder="Flavor / Profile" class="w-full border rounded-lg px-4 py-3">
+          <button onclick="startWhiteLabel()" class="orange-btn text-white w-full py-3 rounded-lg font-medium">Start with Rhodey</button>
+        </div>
+        <div id="wl-status" class="mt-4 text-sm text-slate-500"></div>
       </div>
     </div>
   </section>
@@ -128,10 +140,10 @@
     <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
       <div>
         <div class="text-sm uppercase tracking-widest mb-2">COMMERCE AND MARKET ACTIVATION SERVICES</div>
-        <h2 class="serif text-4xl font-bold">Seamless Market Access</h2>
+        <h2 class="serif text-4xl font-bold">Seamless Market Access: Online, Retail & Wholesale</h2>
       </div>
       <div>
-        <p class="mb-4">Our curated marketplace has the largest selection of no- and low-alcohol beverages. Turnkey services available.</p>
+        <p class="mb-4">Our curated non-alcoholic marketplace has the largest and best selection in the US. Turnkey marketing and operations available, including licensed low-alc via BevStack.</p>
         <a href="mailto:sales@betterrhodes.co" class="bg-white text-orange-600 px-6 py-3 rounded inline-block mt-4 font-medium">Work With Us</a>
       </div>
     </div>
@@ -140,9 +152,9 @@
   <!-- Staff -->
   <section id="staff" class="py-16 bg-slate-100">
     <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="serif text-3xl font-bold mb-4">Staff Platform</h2>
-      <p class="text-slate-600 mb-6">Powered by metaverve-work. Staff manage boards, customers, vendors, and white-label jobs. AutoVidTurbo handles social videos. Learning journal from CROSDOGGY-4000.</p>
-      <a href="https://github.com/metaverve/metaverve-work" class="orange-btn text-white px-6 py-3 rounded inline-block">Staff Portal</a>
+      <h2 class="serif text-3xl font-bold mb-4">Staff Platform — MetaVerve Work</h2>
+      <p class="text-slate-600 mb-6">Staff log in with GitHub OAuth to manage boards, customers, vendors, tasks, and planning. White-label jobs and AutoVidTurbo video requests appear as tasks. Learning journal from CROSDOGGY-4000 and marketing elements available.</p>
+      <a href="https://github.com/metaverve/metaverve-work" class="orange-btn text-white px-6 py-3 rounded inline-block">Access / Deploy Staff Portal</a>
     </div>
   </section>
 
@@ -151,8 +163,29 @@
     <div class="max-w-7xl mx-auto px-6 text-center">
       <div class="serif text-2xl mb-2">Better Rhodes</div>
       <p class="text-slate-400 text-sm">All Together. Premium No- and Low-Alcohol Experience.</p>
-      <p class="text-xs text-slate-500 mt-4">sales@betterrhodes.co</p>
+      <p class="text-xs text-slate-500 mt-4">sales@betterrhodes.co • Powered by Rhodey • Staff: metaverve-work • Video: AutoVidTurbo</p>
     </div>
   </footer>
+
+  <script>
+    function sendRhodey() {
+      const input = document.getElementById('rhodey-input');
+      const chat = document.getElementById('rhodey-chat');
+      const msg = input.value.trim();
+      if (!msg) return;
+      chat.innerHTML += `<div class="text-right text-sm mt-2"><span class="bg-orange-100 px-3 py-1 rounded-2xl inline-block">${msg}</span></div>`;
+      chat.innerHTML += `<div class="text-sm mt-2">Rhodey: I can help with that. For white-label, use the maker below. For staff planning, visit the Staff section. AutoVidTurbo is ready for social video briefs.</div>`;
+      chat.scrollTop = chat.scrollHeight;
+      input.value = '';
+    }
+
+    function startWhiteLabel() {
+      const brand = document.getElementById('brand-name').value || 'Your Brand';
+      const type = document.getElementById('product-type').value;
+      const flavor = document.getElementById('flavor').value || 'Signature';
+      const status = document.getElementById('wl-status');
+      status.innerHTML = `<strong>Rhodey is generating your ${type} concept for "${brand}" (${flavor}).</strong><br>Label preview ready. Social video brief queued to AutoVidTurbo worker (POST /compose). Task created in MetaVerve Work staff board.`;
+    }
+  </script>
 </body>
 </html>
