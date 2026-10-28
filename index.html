@@ -3,176 +3,158 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Better Rhodes | Premium No & Low Alcohol</title>
+  <title>Better Rhodes | Leading the Exploration of No- and Low-Alcohol</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Inter', sans-serif; background: #f7f3ee; color: #1c1917; }
-    .serif { font-family: 'Playfair Display', serif; }
-    .btn-primary { background: #c2410c; color: white; }
-    .btn-primary:hover { background: #9a3412; }
+    body { font-family: 'Inter', sans-serif; background-color: #e8e4d9; color: #2c3e50; }
+    .serif { font-family: 'Libre Baskerville', serif; }
+    .orange-btn { background-color: #d97706; }
+    .orange-btn:hover { background-color: #b45309; }
   </style>
 </head>
-<body class="antialiased">
+<body>
   <!-- Nav -->
-  <nav class="fixed top-0 w-full bg-[#f7f3ee]/95 backdrop-blur-md z-50 border-b border-stone-200/60">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 h-20 flex items-center justify-between">
+  <nav class="fixed w-full bg-[#e8e4d9]/95 backdrop-blur-md z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <div class="flex items-center gap-3">
-        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="22" cy="22" r="20" stroke="#1c1917" stroke-width="1.5"/>
-          <text x="22" y="18" text-anchor="middle" font-size="7" font-weight="600" fill="#1c1917" font-family="Inter">BETTER</text>
-          <text x="22" y="26" text-anchor="middle" font-size="7" font-weight="600" fill="#1c1917" font-family="Inter">RHODES</text>
-        </svg>
-        <span class="serif text-xl font-semibold tracking-tight hidden sm:block">Better Rhodes</span>
+        <div class="w-12 h-12 border-2 border-slate-800 rounded-full flex items-center justify-center text-[10px] font-bold text-center leading-tight">BETTER<br>RHODES</div>
+        <span class="serif text-xl font-bold hidden sm:inline">Better Rhodes</span>
       </div>
-      <div class="hidden md:flex items-center gap-10 text-sm font-medium">
-        <a href="#story" class="hover:text-orange-700 transition">Story</a>
-        <a href="#brands" class="hover:text-orange-700 transition">Brands</a>
-        <a href="#white-label" class="hover:text-orange-700 transition">White Label</a>
-        <a href="#services" class="hover:text-orange-700 transition">Services</a>
-        <a href="#insights" class="hover:text-orange-700 transition">Insights</a>
+      <div class="hidden md:flex space-x-8 text-sm font-medium">
+        <a href="#story" class="hover:text-orange-600">Story</a>
+        <a href="#brands" class="hover:text-orange-600">Brands</a>
+        <a href="#white-label" class="hover:text-orange-600">White Label</a>
+        <a href="#services" class="hover:text-orange-600">Services</a>
+        <a href="#insights" class="hover:text-orange-600">Insights</a>
+        <a href="#staff" class="hover:text-orange-600">Staff</a>
       </div>
-      <a href="https://www.betterrhodes.com" class="btn-primary px-5 py-2.5 rounded-md text-sm font-medium">Marketplace</a>
+      <a href="https://www.betterrhodes.com" class="orange-btn text-white px-5 py-2 rounded text-sm font-medium">Marketplace</a>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="pt-28 pb-16 px-6 lg:px-8 max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
-    <div class="lg:col-span-6">
-      <h1 class="serif text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight text-stone-900">
-        Leading the Exploration<br>of the No- and Low-<br>Alcohol Experience
-      </h1>
-      <p class="mt-6 text-lg text-stone-600 leading-relaxed max-w-md">
-        Charting a path to premium, alcohol-free enjoyment. Rhodey, your intelligent agent, helps you discover brands, scope private label, and create social assets.
-      </p>
+  <!-- Hero matching original screenshots -->
+  <section class="pt-28 pb-16 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <h1 class="serif text-5xl md:text-6xl font-bold leading-tight text-slate-800">Leading the Exploration<br>of the No- and Low-<br>Alcohol Experience</h1>
+      <p class="mt-6 text-lg text-slate-600">Charting a path to premium, alcohol-free enjoyment for those who value more in each moment. Powered by Rhodey for discovery and white-label creation.</p>
       <div class="mt-8 flex gap-4">
-        <a href="#brands" class="btn-primary px-6 py-3 rounded-md font-medium">Explore Brands</a>
-        <a href="#white-label" class="border-2 border-stone-800 px-6 py-3 rounded-md font-medium hover:bg-white transition">White Label</a>
+        <a href="#brands" class="orange-btn text-white px-6 py-3 rounded font-medium">Explore Brands</a>
+        <a href="#white-label" class="border-2 border-slate-800 text-slate-800 px-6 py-3 rounded font-medium hover:bg-white">White Label</a>
       </div>
     </div>
-    <div class="lg:col-span-6 relative h-[420px]">
-      <!-- Product collage with real images -->
-      <div class="absolute top-0 right-8 w-64 h-64 rounded-full overflow-hidden border-[12px] border-[#f7f3ee] shadow-2xl z-10">
-        <img src="https://www.betterrhodes.com/cdn/shop/products/WanderFoundPinotNoir.png" alt="Wander & Found" class="w-full h-full object-cover">
+    <div class="relative flex justify-center items-center h-96">
+      <!-- Use reliable public images or note for local -->
+      <div class="absolute w-56 h-56 rounded-full overflow-hidden border-8 border-[#e8e4d9] shadow-xl z-20" style="top:0; right:15%;">
+        <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=400&h=400&fit=crop" alt="Wander & Found style" class="w-full h-full object-cover">
       </div>
-      <div class="absolute bottom-8 left-4 w-48 h-48 rounded-full overflow-hidden border-[10px] border-[#f7f3ee] shadow-xl">
-        <img src="https://www.betterrhodes.com/cdn/shop/products/SeirHillMashville.png" alt="Seir Hill" class="w-full h-full object-cover">
+      <div class="absolute w-48 h-48 rounded-full overflow-hidden border-8 border-[#e8e4d9] shadow-xl" style="bottom:20px; left:10%;">
+        <img src="https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=400&h=400&fit=crop" alt="Seir Hill style" class="w-full h-full object-cover">
       </div>
-      <div class="absolute bottom-4 right-0 w-40 h-40 rounded-full overflow-hidden border-[8px] border-[#f7f3ee] shadow-xl">
-        <img src="https://www.betterrhodes.com/cdn/shop/products/SirJamesPassionfruit.png" alt="Sir James 101" class="w-full h-full object-cover">
+      <div class="absolute w-40 h-40 rounded-full overflow-hidden border-8 border-[#e8e4d9] shadow-xl" style="bottom:40px; right:0;">
+        <img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=400&h=400&fit=crop" alt="Sir James style" class="w-full h-full object-cover">
       </div>
     </div>
   </section>
 
-  <!-- Rhodey Agent -->
-  <section class="py-8 px-6 max-w-2xl mx-auto">
-    <div class="bg-white rounded-3xl shadow-md border border-stone-200 p-6">
+  <!-- Rhodey -->
+  <section class="py-8 px-6 max-w-4xl mx-auto">
+    <div class="bg-white rounded-3xl shadow-xl p-6 border border-slate-200">
       <div class="flex items-center gap-3 mb-4">
-        <div class="w-10 h-10 bg-orange-700 rounded-full flex items-center justify-center text-white font-semibold">R</div>
+        <div class="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold">R</div>
         <div>
           <div class="font-semibold">Rhodey</div>
-          <div class="text-xs text-stone-500">AI Agent for Discovery & Creation</div>
+          <div class="text-xs text-slate-500">Your AI Agent for brands, white-label, and socials</div>
         </div>
       </div>
-      <div class="bg-stone-50 rounded-2xl p-4 text-sm text-stone-700 mb-4">
-        How can I help you today? Explore our exclusive brands, start a private label project, or generate a social video for your launch.
-      </div>
+      <div class="bg-slate-100 rounded-2xl p-3 text-sm mb-4">Welcome. How can I help you explore No- and Low-alcohol options or start a private label project today?</div>
       <div class="flex gap-2">
-        <input type="text" placeholder="Ask Rhodey..." class="flex-1 border border-stone-300 rounded-full px-4 py-2.5 text-sm focus:outline-none focus:border-orange-600">
-        <button class="btn-primary rounded-full px-5 py-2.5 text-sm">Send</button>
+        <input type="text" placeholder="Ask Rhodey..." class="flex-1 border border-slate-200 rounded-full px-4 py-2 text-sm focus:outline-none focus:border-orange-500">
+        <button class="orange-btn text-white rounded-full px-5 py-2 text-sm">Send</button>
       </div>
     </div>
   </section>
 
   <!-- Story -->
-  <section id="story" class="bg-stone-900 text-white py-24">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16">
+  <section id="story" class="bg-slate-800 text-white py-20">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
       <div>
-        <div class="text-xs uppercase tracking-widest text-stone-400 mb-4">Our Story</div>
-        <h2 class="serif text-4xl lg:text-5xl font-bold leading-tight">Charting a path to premium, alcohol-free enjoyment for those who value more in each moment.</h2>
+        <div class="text-sm uppercase tracking-widest text-slate-400 mb-2">OUR STORY</div>
+        <h2 class="serif text-4xl font-bold leading-tight">Charting a path to premium, alcohol-free enjoyment for those who value more in each moment.</h2>
       </div>
-      <div class="text-stone-300 text-lg leading-relaxed">
-        <p>Better Rhodes was started as an idea to bring the No- and Low-Alcohol beverages to market through the development of game-changing brands. Our marketplace has been the leading community to hear from customers and has grown into the best destination with the most selection of curated and new brands. All our efforts drive to one thing: bringing the best in the category to consumers. We're proud of the brands we're building that represent the next generation in the category.</p>
+      <div class="text-slate-300">
+        <p>Better Rhodes was started as an idea to bring the No- and Low-Alcohol beverages to market through the development of game changing brands. Our marketplace has been the leading community to hear from customers and has grown into the best destination with the most selection of curated and new brands. All our efforts drive to one thing: bringing the best in the category to consumers. We’re proud of the brands we’re building that represent the next generation in the category.</p>
       </div>
     </div>
   </section>
 
   <!-- Brands -->
-  <section id="brands" class="py-24">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-16 mb-16">
-        <h2 class="serif text-4xl lg:text-5xl font-bold">Better Rhodes, Better Brands: Our Exclusive Product Portfolio</h2>
-        <div class="text-stone-600 leading-relaxed">
-          <p class="mb-6">Better Rhodes is proud to own and manage a portfolio of premium non-alcoholic brands, including Wander & Found, Splash Of, Seir Hill, and Sir James 101. These brands deliver exceptional taste, quality, and innovation in this continuously evolving category.</p>
-          <a href="https://airgoods.com/u/betterrhodes" class="btn-primary inline-block px-6 py-3 rounded-md">Wholesale Orders</a>
+  <section id="brands" class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 mb-12">
+        <h2 class="serif text-4xl font-bold">Better Rhodes, Better Brands: Our Exclusive Product Portfolio</h2>
+        <div>
+          <p class="text-slate-600 mb-4">Better Rhodes is proud to own and manage a portfolio of premium non-alcoholic brands, including Wander & Found, Splash Of, Seir Hill, and Sir James 101. These brands deliver exceptional taste, quality, and innovation in this continuously evolving category.</p>
+          <a href="https://airgoods.com/u/betterrhodes" class="inline-block orange-btn text-white px-6 py-3 rounded mt-4">Wholesale Orders</a>
         </div>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-stone-200">
+      <div class="flex flex-wrap justify-center gap-12 mt-12">
         <div class="text-center"><div class="serif text-2xl font-bold">Wander & Found</div></div>
-        <div class="text-center"><div class="serif text-2xl font-bold tracking-wide">SEIR HILL</div></div>
-        <div class="text-center"><div class="serif text-xl font-bold">SIR. JAMES 101</div></div>
-        <div class="text-center"><div class="serif text-3xl italic font-bold">Splash Of</div></div>
+        <div class="text-center"><div class="serif text-2xl font-bold">SEIR HILL</div></div>
+        <div class="text-center"><div class="serif text-2xl font-bold">SIR. JAMES 101</div></div>
+        <div class="text-center"><div class="serif text-2xl font-bold italic">Splash Of</div></div>
       </div>
     </div>
   </section>
 
-  <!-- White Label with Rhodey -->
-  <section id="white-label" class="py-24 bg-white">
+  <!-- White Label -->
+  <section id="white-label" class="py-20 bg-white/50">
     <div class="max-w-4xl mx-auto px-6 text-center">
-      <div class="text-xs uppercase tracking-widest text-stone-500 mb-3">Private Label Solutions</div>
-      <h2 class="serif text-4xl lg:text-5xl font-bold mb-4">Your Brand, Our Expertise</h2>
-      <p class="text-stone-600 max-w-2xl mx-auto mb-10">End-to-end white-label solutions. Rhodey guides you through brand creation, label design, and social video generation with AutoVidTurbo.</p>
-      <div class="bg-stone-50 rounded-3xl p-8 border border-stone-200 text-left max-w-2xl mx-auto">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-8 h-8 bg-orange-700 rounded-full flex items-center justify-center text-white text-sm font-bold">R</div>
-          <span class="font-medium">Rhodey — White Label Assistant</span>
-        </div>
-        <p class="text-sm text-stone-600 mb-4">Tell me your brand name and product type. I'll help refine the concept, suggest tasting notes, and prepare assets for your launch.</p>
-        <div class="flex gap-2">
-          <input type="text" placeholder="Brand name and product type..." class="flex-1 border border-stone-300 rounded-full px-4 py-2 text-sm">
-          <button class="btn-primary rounded-full px-4 py-2 text-sm">Start with Rhodey</button>
-        </div>
-      </div>
+      <div class="text-sm uppercase tracking-widest text-slate-500 mb-2">PRIVATE LABEL SOLUTIONS</div>
+      <h2 class="serif text-4xl font-bold mb-4">Your Brand, Our Expertise</h2>
+      <p class="text-slate-600 mb-6">Better Rhodes makes it easy to bring your No- or Low-alcohol wines, spirits and mocktails to market. Rhodey assists with concept, label, and AutoVidTurbo social video creation.</p>
+      <a href="#contact" class="orange-btn text-white px-6 py-3 rounded inline-block">Work With Us</a>
     </div>
   </section>
 
   <!-- Services -->
-  <section id="services" class="py-24 bg-orange-700 text-white">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16">
+  <section id="services" class="py-20 bg-orange-600 text-white">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
       <div>
-        <div class="text-xs uppercase tracking-widest text-orange-200 mb-4">Commerce & Market Activation</div>
-        <h2 class="serif text-4xl lg:text-5xl font-bold">Seamless Market Access</h2>
+        <div class="text-sm uppercase tracking-widest mb-2">COMMERCE AND MARKET ACTIVATION SERVICES</div>
+        <h2 class="serif text-4xl font-bold">Seamless Market Access: Online, Retail & Wholesale</h2>
       </div>
-      <div class="text-orange-100 leading-relaxed">
-        <p>Our curated marketplace offers the largest and best selection of no- and low-alcohol beverages in the US, with distribution across online, retail, and wholesale channels. Turnkey marketing and operations available, including licensed low-alc products via BevStack.</p>
+      <div>
+        <p class="mb-4">Since our start, Better Rhodes has been focused on what the customers are looking for from Low- and No- alcohol beverages. Our curated non-alcoholic marketplace has the largest and best selection in the US.</p>
+        <a href="#contact" class="bg-white text-orange-600 px-6 py-3 rounded inline-block mt-4 font-medium">Work With Us</a>
       </div>
     </div>
   </section>
 
   <!-- Insights -->
-  <section id="insights" class="py-24">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-      <div class="text-xs uppercase tracking-widest text-stone-500 mb-3">Insights & Content</div>
-      <h2 class="serif text-4xl font-bold mb-6">Data-Driven Insights for the NA Market</h2>
-      <p class="text-stone-600 max-w-3xl mx-auto">Leverage data from the Better Rhodes Marketplace, Better Without App, and Mock The Toast newsletter. Marketing elements from the marketingdepartment platform available for staff.</p>
+  <section id="insights" class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-sm uppercase tracking-widest text-slate-500 mb-2">INSIGHTS AND CONTENT</div>
+      <h2 class="serif text-4xl font-bold mb-8">Navigate the NA Market with Data-Driven Insights</h2>
+      <p class="text-slate-600">At Better Rhodes, we chart the path to success for non-alcoholic brands by leveraging data from our comprehensive digital ecosystem.</p>
     </div>
   </section>
 
   <!-- Staff -->
-  <section id="staff" class="py-16 bg-stone-100">
+  <section id="staff" class="py-20 bg-slate-100">
     <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="serif text-3xl font-bold mb-4">Staff Platform</h2>
-      <p class="text-stone-600 mb-6">Access MetaVerve Work for boards, tasks, and planning. Learning journal from CROSDOGGY-4000. Video maker powered by AutoVidTurbo.</p>
-      <a href="https://github.com/metaverve/metaverve-work" class="btn-primary inline-block px-6 py-3 rounded-md">Staff Portal</a>
+      <h2 class="serif text-3xl font-bold mb-4">Staff Platform — MetaVerve Work</h2>
+      <p class="text-slate-600 mb-6">Log in to plan, manage boards, and interact. Learning journal and AutoVidTurbo integrations ready.</p>
+      <a href="https://github.com/metaverve/metaverve-work" class="orange-btn text-white px-6 py-3 rounded inline-block">Access Staff Portal</a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-stone-950 text-white py-12">
+  <footer class="bg-slate-900 text-white py-12">
     <div class="max-w-7xl mx-auto px-6 text-center">
-      <div class="serif text-xl font-semibold mb-2">Better Rhodes</div>
-      <p class="text-stone-400 text-sm">All Together. Premium No- and Low-Alcohol Experience.</p>
-      <p class="text-xs text-stone-500 mt-4">sales@betterrhodes.co • Powered by Rhodey AI</p>
+      <div class="serif text-2xl mb-2">Better Rhodes</div>
+      <p class="text-slate-400 text-sm">All Together. Premium No- and Low-Alcohol Experience.</p>
+      <p class="text-xs text-slate-500 mt-4">sales@betterrhodes.co • Modern agentic rebuild</p>
     </div>
   </footer>
 </body>
