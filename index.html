@@ -13,7 +13,9 @@
     .orange-btn:hover { background-color: #b45309; }
     .dark-section { background-color: #2d3748; }
     .product-circle { width: 220px; height: 220px; border-radius: 50%; object-fit: cover; border: 8px solid #e8e4d9; }
-    .agent-chat { max-height: 320px; overflow-y: auto; }
+    .agent-chat { max-height: 280px; overflow-y: auto; }
+    .step { transition: all 0.3s; }
+    .step.active { border-color: #d97706; background: white; }
   </style>
 </head>
 <body>
@@ -37,39 +39,38 @@
   </nav>
 
   <!-- Hero -->
-  <section class="pt-28 pb-16 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+  <section class="pt-28 pb-12 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
     <div>
       <h1 class="serif text-5xl md:text-6xl font-bold leading-tight text-slate-800">Leading the Exploration<br>of the No- and Low-<br>Alcohol Experience</h1>
-      <p class="mt-6 text-lg text-slate-600">Charting a path to premium, alcohol-free enjoyment for those who value more in each moment. Powered by intelligent agents for discovery and private label.</p>
+      <p class="mt-6 text-lg text-slate-600">Charting a path to premium, alcohol-free enjoyment. Meet <strong>Rhodey</strong>, your AI agent for discovery, white-label creation, and more.</p>
       <div class="mt-8 flex gap-4">
         <a href="#brands" class="orange-btn text-white px-6 py-3 rounded font-medium">Explore Brands</a>
-        <a href="#white-label" class="border-2 border-slate-800 text-slate-800 px-6 py-3 rounded font-medium hover:bg-white">White Label</a>
+        <a href="#white-label" class="border-2 border-slate-800 text-slate-800 px-6 py-3 rounded font-medium hover:bg-white">Start White Label</a>
       </div>
     </div>
     <div class="relative flex justify-center items-center">
       <img src="https://www.betterrhodes.com/cdn/shop/products/WanderFoundPinotNoir.png" alt="Wander & Found" class="product-circle absolute z-10" style="top:0; right:20%;">
       <img src="https://www.betterrhodes.com/cdn/shop/products/SeirHillMashville.png" alt="Seir Hill" class="product-circle absolute" style="bottom:0; left:10%;">
       <img src="https://www.betterrhodes.com/cdn/shop/products/SirJamesPassionfruit.png" alt="Sir James" class="product-circle absolute" style="bottom:20%; right:0;">
-      <!-- Fallback circles if images fail -->
       <div class="w-64 h-64 bg-slate-200 rounded-full flex items-center justify-center text-4xl">🍷</div>
     </div>
   </section>
 
-  <!-- Agentic Chat Overlay-style -->
+  <!-- Rhodey Agent Chat -->
   <section class="py-8 px-6 max-w-4xl mx-auto">
     <div class="bg-white rounded-3xl shadow-xl p-6 border border-slate-200">
       <div class="flex items-center gap-3 mb-4">
-        <div class="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold">AI</div>
+        <div class="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold">R</div>
         <div>
-          <div class="font-semibold">Rhodes Agent</div>
-          <div class="text-xs text-slate-500">Discover products, white-label options, or vendor services</div>
+          <div class="font-semibold">Rhodey</div>
+          <div class="text-xs text-slate-500">Your Better Rhodes AI Agent — discovery, white-label, recipes & more</div>
         </div>
       </div>
       <div class="agent-chat space-y-3 text-sm mb-4">
-        <div class="bg-slate-100 rounded-2xl p-3">Welcome to Better Rhodes. How can I help you explore No- and Low-alcohol options or start a private label project today?</div>
+        <div class="bg-slate-100 rounded-2xl p-3">Hey! I'm Rhodey. Want to explore our brands, start a private label project, or generate a social video for your launch?</div>
       </div>
       <div class="flex gap-2">
-        <input type="text" placeholder="Ask about brands, recipes, wholesale, or white-label..." class="flex-1 border border-slate-200 rounded-full px-4 py-2 text-sm focus:outline-none focus:border-orange-500">
+        <input type="text" placeholder="Ask Rhodey about brands, white-label, or socials..." class="flex-1 border border-slate-200 rounded-full px-4 py-2 text-sm focus:outline-none focus:border-orange-500">
         <button class="orange-btn text-white rounded-full px-5 py-2 text-sm">Send</button>
       </div>
     </div>
@@ -108,20 +109,59 @@
     </div>
   </section>
 
-  <!-- White Label -->
+  <!-- Expanded White Label Maker -->
   <section id="white-label" class="py-20 bg-white/50">
-    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-      <div>
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12">
         <div class="text-sm uppercase tracking-widest text-slate-500 mb-2">PRIVATE LABEL SOLUTIONS</div>
-        <h2 class="serif text-4xl font-bold mb-4">Your Brand, Our Expertise</h2>
-        <img src="https://www.betterrhodes.com/cdn/shop/products/StewLeonardsNA.png" alt="Private Label Example" class="w-48 h-auto mx-auto md:mx-0 rounded-lg shadow-lg">
+        <h2 class="serif text-4xl font-bold">White-Label Product Maker</h2>
+        <p class="text-slate-600 mt-4 max-w-2xl mx-auto">Powered by Rhodey. Clean, step-by-step creation inspired by modern maker tools. Generate labels, preview products, and create social videos with AutoVidTurbo.</p>
       </div>
-      <div>
-        <p class="text-slate-600 mb-4">Better Rhodes makes it easy to bring your No- or Low-alcohol wines, spirits and mocktails to market with our award-winning suite of products and expert product development team. Whether you’re launching a new brand or expanding an existing lineup, we provide end-to-end white-label and private-label solutions tailored to your vision.</p>
-        <p class="text-slate-600 mb-6">From formulation and sourcing to branding and distribution, our industry expertise ensures a seamless process. Includes label maker and AutoVidTurbo video maker for socials.</p>
-        <a href="#contact" class="orange-btn text-white px-6 py-3 rounded inline-block">Work With Us</a>
-        <div class="mt-8 bg-slate-50 p-4 rounded-lg text-sm">
-          <strong>White-Label Configurator (preview):</strong> Brand name, product type, flavor → Label preview + trigger AutoVidTurbo compose endpoint for social video.
+
+      <!-- Steps -->
+      <div class="grid md:grid-cols-4 gap-4 mb-10">
+        <div class="step active border-2 border-orange-500 rounded-xl p-4 text-center bg-white">
+          <div class="text-2xl font-bold text-orange-600">1</div>
+          <div class="font-medium mt-1">Brand & Type</div>
+        </div>
+        <div class="step border-2 border-slate-200 rounded-xl p-4 text-center bg-slate-50">
+          <div class="text-2xl font-bold text-slate-400">2</div>
+          <div class="font-medium mt-1">Flavor & Profile</div>
+        </div>
+        <div class="step border-2 border-slate-200 rounded-xl p-4 text-center bg-slate-50">
+          <div class="text-2xl font-bold text-slate-400">3</div>
+          <div class="font-medium mt-1">Label Design</div>
+        </div>
+        <div class="step border-2 border-slate-200 rounded-xl p-4 text-center bg-slate-50">
+          <div class="text-2xl font-bold text-slate-400">4</div>
+          <div class="font-medium mt-1">Social Video</div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-3xl shadow-lg p-8 border">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="font-semibold text-lg mb-4">Step 1: Brand & Product Type</h3>
+            <div class="space-y-4">
+              <input type="text" placeholder="Your Brand Name" class="w-full border rounded-lg px-4 py-3">
+              <select class="w-full border rounded-lg px-4 py-3">
+                <option>Wine</option>
+                <option>Spirit Alternative</option>
+                <option>RTD Mocktail</option>
+                <option>Beer</option>
+              </select>
+              <input type="text" placeholder="Target Audience / Occasion" class="w-full border rounded-lg px-4 py-3">
+              <button class="orange-btn text-white w-full py-3 rounded-lg font-medium">Next → Flavor</button>
+            </div>
+          </div>
+          <div class="flex flex-col items-center justify-center bg-slate-50 rounded-2xl p-6">
+            <div class="w-48 h-64 bg-gradient-to-b from-amber-100 to-amber-200 rounded-lg flex items-center justify-center text-6xl mb-4">🍾</div>
+            <div class="text-sm text-slate-500 text-center">Live Label Preview<br><span class="font-medium">Your Brand Here</span></div>
+            <button class="mt-4 text-sm border border-slate-300 px-4 py-2 rounded-full">Generate with Rhodey</button>
+          </div>
+        </div>
+        <div class="mt-8 pt-6 border-t text-sm text-slate-500">
+          Next steps: Flavor profile → Label maker (canvas or Canva) → AutoVidTurbo social video (TTS + captions + compose). Rhodey can suggest recipes and copy throughout.
         </div>
       </div>
     </div>
@@ -182,7 +222,7 @@
     <div class="max-w-7xl mx-auto px-6 text-center">
       <div class="serif text-2xl mb-2">Better Rhodes</div>
       <p class="text-slate-400 text-sm">All Together. Premium No- and Low-Alcohol Experience.</p>
-      <p class="text-xs text-slate-500 mt-4">sales@betterrhodes.co • Modern agentic rebuild integrating metaverve-work, AutoVidTurbo, marketingdepartment, and CROSDOGGY-4000 learning mechanics.</p>
+      <p class="text-xs text-slate-500 mt-4">sales@betterrhodes.co • Modern agentic rebuild with Rhodey AI, metaverve-work, AutoVidTurbo, marketingdepartment, and CROSDOGGY-4000.</p>
     </div>
   </footer>
 </body>
